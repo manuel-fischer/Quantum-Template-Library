@@ -1,0 +1,17 @@
+{
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/include/"
+    ],
+    "C_Cpp.default.cppStandard": "c++20",
+    "files.associations": {
+        "xtr1common": "cpp",
+        "memory": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "xmemory": "cpp",
+        "xstddef": "cpp",
+        "xstring": "cpp",
+        "initializer_list": "cpp",
+        "xutility": "cpp"
+    }
+}
