@@ -1,4 +1,6 @@
 #include <iostream>
+#include <array>
+#include <algorithm>
 #include "qtl.hpp"
 
 
@@ -40,4 +42,29 @@ int main()
     cout << SIZE::of(sized) << '\n';
 
     cout << SIZE::isin<less<>> << '\n';
+
+
+
+    array<int, 5> fibs = {{ 1, 1, 2, 3, 5 }};
+    for(int fib : fibs) cout << fib << ' ';
+    cout << "- ";
+
+    auto r = reversed {fibs};
+    for(int fib : r) cout << fib << ' ';
+    cout << "- ";
+
+    std::sort(std::begin(r), std::end(r));
+    for(int fib : r) cout << fib << ' ';
+    cout << "- ";
+
+    std::sort(std::begin(fibs), std::end(fibs));
+    for(int fib : r) cout << fib << '~';
+    cout << "- ";
+
+    std::sort(qtl::ibegin(fibs), qtl::iend(fibs));
+    for(int fib : fibs) cout << fib << '~';
+    cout << '\n';
+
+    //std::for_each(qtl::ibegin(fibs), qtl::iend(fibs), [](int i) { cout << i << ','; });
+    //cout << '\n';
 }
